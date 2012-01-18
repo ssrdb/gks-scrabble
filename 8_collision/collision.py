@@ -80,20 +80,19 @@ class Particle():
 
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption('Bounce')
-number_of_particles = 20
+number_of_particles = 100
 my_particles = []
 screen.fill(background_colour)
 clock = pygame.time.Clock()
 
 for n in range(number_of_particles):
-    size = random.randint(5, 5)
+    size = random.randint(1, 5)
     x = random.randint(size, width-size)
     y = random.randint(size, height-size)
 
     particle = Particle((x,y),size)
     particle.speed = random.uniform(1,2)
-    """particle.angle = random.uniform(0,math.pi*2)"""
-    particle.angle = 3*math.pi/2.0
+    particle.angle = random.uniform(0,math.pi*2)
     my_particles.append(particle)
 
 selected_particle = None

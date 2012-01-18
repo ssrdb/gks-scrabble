@@ -86,14 +86,13 @@ screen.fill(background_colour)
 clock = pygame.time.Clock()
 
 for n in range(number_of_particles):
-    size = random.randint(40, 40)
+    size = random.randint(10, 20)
     x = random.randint(size, width-size)
     y = random.randint(size, height-size)
 
     particle = Particle((x,y),size)
     particle.speed = random.uniform(1,2)
-    """particle.angle = random.uniform(0,math.pi*2)"""
-    particle.angle = 3*math.pi/2.0
+    particle.angle = random.uniform(0,math.pi*2)
     my_particles.append(particle)
 
 selected_particle = None
